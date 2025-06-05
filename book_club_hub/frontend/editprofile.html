@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Profile | Book Club Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/editprofile.css">
+
+</head>
+<body>
+  <div class="edit-container">
+    <div class="edit-header">
+      <h1>Edit Profile</h1>
+    </div>
+
+    <form action="../backend/editprofile.php" method="POST">
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" >
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">New Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter new password" >
+      </div>
+
+      <div class="form-group">
+        <label>Favorite Genres</label>
+        <div class="custom-dropdown">
+          <div class="custom-dropdown-toggle" onclick="toggleDropdown()">Select genres</div>
+          <div class="dropdown-options" id="genre-options">
+            <label><input type="checkbox" value="Fiction" onchange="updateTags(this)"> Fiction</label>
+            <label><input type="checkbox" value="Sci-Fi" onchange="updateTags(this)"> Sci-Fi</label>
+            <label><input type="checkbox" value="Mystery" onchange="updateTags(this)"> Mystery</label>
+            <label><input type="checkbox" value="Romance" onchange="updateTags(this)"> Romance</label>
+          </div>
+          <div class="tag-container" id="selected-tags"></div>
+        </div>
+        <!-- Hidden inputs to submit genres -->
+        <div id="genre-hidden-inputs"></div>
+      </div>
+      <div class="form-group">
+        <label for="bio">Bio</label>
+        <input type="text" id="bio" name="bio" placeholder="Write Something About Yourself">
+      </div>
+
+      <button type="submit" class="btn">Save Changes</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById('genre-options');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function updateTags(checkbox) {
+      const tagContainer = document.getElementById('selected-tags');
+      const hiddenInputs = document.getElementById('genre-hidden-inputs');
+
+      // Clear existing
+      tagContainer.innerHTML = '';
+      hiddenInputs.innerHTML = '';
+
+      const checkboxes = document.querySelectorAll('#genre-options input[type="checkbox"]:checked');
+      checkboxes.forEach(cb => {
+        // Show selected tag
+        const tag = document.createElement('span');
+        tag.classList.add('tag');
+        tag.innerText = cb.value;
+        tagContainer.appendChild(tag);
+
+        // Create hidden input
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'genres[]';
+        input.value = cb.value;
+        hiddenInputs.appendChild(input);
+      });
+    }
+
+    // Optional: close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdown = document.getElementById('genre-options');
+      const toggle = document.querySelector('.custom-dropdown-toggle');
+      if (!toggle.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.style.display = 'none';
+      }
+    });
+  </script>
+
+  <footer class="main-footer">
+   <div class="container">
+      <div class="footer-links">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact Us</a>
+      </div>
+      <p class="copyright">&copy; 2025 Book Club Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delete Account | Book Club Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../frontend/css/profile.css">
+</head>
+<body>
+  <div class="profile-container">
+    <div class="delete-container">
+      <h1>Delete Your Account</h1>
+
+      <div class="warning-message">
+        <h3>⚠️ Warning: This action cannot be undone</h3>
+        <p>Deleting your account will:</p>
+        <ul>
+          <li>Permanently remove all your personal information</li>
+          <li>Delete your reading history and book club memberships</li>
+          <li>Remove any posts or comments you've made</li>
+        </ul>
+      </div>
+
+      <p>Are you sure you want to delete your account?</p>
+
+      <form action="../backend/deleteprofile.php" method="post" class="delete-form">
+        <div class="delete-actions">
+          <button type="submit" name="confirm_delete" class="btn btn-delete">Yes, Delete My Account</button>
+          <button type="submit" name="cancel" class="btn btn-cancel">No, Keep My Account</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <p class="copyright">&copy; 2025 Book Club Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

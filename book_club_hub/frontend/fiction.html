@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fiction Books | Book Club Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/genre.css" />
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="main-header">
+     <div class="container">
+      <h1 class="logo">Book Club Hub</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="fiction.html">Fiction</a>
+        <a href="sci-fi.html">Sci-Fi</a>
+        <a href="romance.html">Romance</a>
+        <a href="fantasy.html">Fantasy</a>
+      </nav>
+    </header>
+
+    <main class="genre-page container">
+      <section class="genre-intro">
+        <h2>Fiction Books</h2>
+        <p>Explore imaginary worlds and compelling characters in these acclaimed works:</p>
+      </section>
+
+      <section class="search-filter-bar">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search books by title or author..."
+          onkeyup="filterBooks()"
+        />
+      </section>
+
+      <section class="book-list-wrapper">
+        <ul class="book-list" id="bookList">
+          
+          <li class="book-card">
+            <div class="book-cover">
+              <img src="https://m.media-amazon.com/images/I/71FxgtFKcQL._AC_UF1000,1000_QL80_.jpg" alt="To Kill a Mockingbird" />
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">To Kill a Mockingbird</h3>
+              <p class="book-author">by Harper Lee</p>
+              <p class="book-description">Set in the American South during the 1930s, this Pulitzer Prize-winning novel follows young Scout Finch as her father, Atticus, defends a Black man wrongly accused of rape, exploring themes of racial injustice and moral growth.</p>
+              <button class="read-btn" onclick="location.href='login-prompt.html'">Read More</button>
+            </div>
+          </li>
+
+          <li class="book-card">
+            <div class="book-cover">
+              <img src="https://m.media-amazon.com/images/I/71FTb9X6wsL._AC_UF1000,1000_QL80_.jpg" alt="The Great Gatsby" />
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">The Great Gatsby</h3>
+              <p class="book-author">by F. Scott Fitzgerald</p>
+              <p class="book-description">A portrait of the Jazz Age in all of its decadence and excess, Gatsby's story follows the pursuit of wealth, status, and the American Dream through the eyes of narrator Nick Carraway.</p>
+              <button class="read-btn" onclick="location.href='login-prompt.html'">Read More</button>
+            </div>
+          </li>
+
+          <li class="book-card">
+            <div class="book-cover">
+              <img src="https://m.media-amazon.com/images/I/61ZewDE3beL._AC_UF1000,1000_QL80_.jpg" alt="1984" />
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">1984</h3>
+              <p class="book-author">by George Orwell</p>
+              <p class="book-description">In a dystopian future where the government controls reality through surveillance, propaganda, and thought control, Winston Smith dares to think and love independently.</p>
+              <button class="read-btn" onclick="location.href='login-prompt.html'">Read More</button>
+            </div>
+          </li>
+
+          <li class="book-card">
+            <div class="book-cover">
+              <img src="https://imgcdn.saxo.com/_9780241984758" alt="The Catcher in the Rye" />
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">The Catcher in the Rye</h3>
+              <p class="book-author">by J.D. Salinger</p>
+              <p class="book-description">Holden Caulfield's cynical yet vulnerable voice narrates this coming-of-age story about teenage alienation and the loss of innocence in post-war America.</p>
+              <button class="read-btn" onclick="location.href='login-prompt.html'">Read More</button>
+            </div>
+          </li>
+
+          <li class="book-card">
+            <div class="book-cover">
+              <img src="https://imgcdn.saxo.com/_9780099760115" alt="Beloved" />
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Beloved</h3>
+              <p class="book-author">by Toni Morrison</p>
+              <p class="book-description">This Pulitzer Prize-winning novel tells the haunting story of Sethe, a former slave haunted by the ghost of her baby daughter, exploring the trauma of slavery's legacy.</p>
+              <button class="read-btn" onclick="location.href='login-prompt.html'">Read More</button>
+            </div>
+          </li>
+
+          <li class="book-card">
+            <div class="book-cover">
+              <img src="https://imgcdn.saxo.com/_9780375842207" alt="The Book Thief" />
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">The Book Thief</h3>
+              <p class="book-author">by Markus Zusak</p>
+              <p class="book-description">Narrated by Death, this novel follows Liesel Meminger, a young girl in Nazi Germany who finds solace by stealing books and sharing them with others during WWII.</p>
+              <button class="read-btn" onclick="location.href='login-prompt.html'">Read More</button>
+            </div>
+          </li>
+
+          <li class="book-card">
+            <div class="book-cover">
+              <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1541428344i/17165596.jpg" alt="The Kite Runner" />
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">The Kite Runner</h3>
+              <p class="book-author">by Khaled Hosseini</p>
+              <p class="book-description">A powerful story of friendship, betrayal, and redemption set against Afghanistan's turbulent history from the fall of the monarchy to the Taliban regime.</p>
+              <button class="read-btn" onclick="location.href='login-prompt.html'">Read More</button>
+            </div>
+          </li>
+
+          <li class="book-card">
+            <div class="book-cover">
+              <img src="https://imgcdn.saxo.com/_9780349142920" alt="Little Fires Everywhere" />
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Little Fires Everywhere</h3>
+              <p class="book-author">by Celeste Ng</p>
+              <p class="book-description">In Shaker Heights, a placid suburb of Cleveland, a custody battle over a Chinese-American baby divides the town and exposes the fault lines of race and class.</p>
+              <button class="read-btn" onclick="location.href='login-prompt.html'">Read More</button>
+            </div>
+          </li>
+
+          <li class="book-card">
+            <div class="book-cover">
+              <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1582135294i/36809135.jpg" alt="Where the Crawdads Sing" />
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Where the Crawdads Sing</h3>
+              <p class="book-author">by Delia Owens</p>
+              <p class="book-description">A murder mystery and coming-of-age story about Kya, the "Marsh Girl" who survives alone in the North Carolina coastal wilderness, becoming a suspect when a local man is found dead.</p>
+              <button class="read-btn" onclick="location.href='login-prompt.html'">Read More</button>
+            </div>
+          </li>
+
+          <li class="book-card">
+            <div class="book-cover">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsicQ6UfVUVjq1276rZ0wXH-noAKvwScxcsQ&s" alt="Normal People" />
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Normal People</h3>
+              <p class="book-author">by Sally Rooney</p>
+              <p class="book-description">The story of mutual fascination between Marianne and Connell follows them from high school in a small Irish town to university at Trinity College, exploring their complex relationship.</p>
+              <button class="read-btn" onclick="location.href='login-prompt.html'">Read More</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="main-footer container">
+      <div class="footer-links">
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <p class="copyright">&copy; 2023 Book Club Hub. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function filterBooks() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const bookCards = document.getElementById('bookList').getElementsByClassName('book-card');
+
+      for (let i = 0; i < bookCards.length; i++) {
+        const text = bookCards[i].textContent.toLowerCase();
+        bookCards[i].style.display = text.includes(input) ? '' : 'none';
+      }
+    }
+  </script>
+</body>
+</html>

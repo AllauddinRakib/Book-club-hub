@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join a Club – Book Club Hub</title>
+  <link rel="stylesheet" href="css/club.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">Join a Book Club</h1>
+      <a href="index.html" class="btn">← Back to Home</a>
+    </div>
+  </header>
+
+  <main class="clubs-container">
+    <!-- Sci-Fi Club -->
+    <section id="scifi" class="club-section">
+      <h2>Sci-Fi Lovers Club</h2>
+      <p>Dive into futuristic adventures and explore advanced tech, time travel, and alien civilizations.</p>
+      
+      <form class="join-form" action="../backend/process_join.php" method="POST">
+        <h4>Join the Sci-Fi Club</h4>
+        <label>
+          Name:
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" required>
+        </label>
+        <input type="hidden" name="club" value="Sci-Fi">
+        <button type="submit">Join Now</button>
+      </form>
+    </section>
+
+    <!-- Fiction Club -->
+    <section id="fiction" class="club-section">
+      <h2>Fiction Seekers Club</h2>
+      <p>Join readers who love imaginary heroes with outstanding abilities.</p>
+      
+      <form class="join-form" action="../backend/process_join.php" method="POST">
+        <h4>Join the Fiction Club</h4>
+        <label>
+          Name:
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" required>
+        </label>
+        <input type="hidden" name="club" value="Fiction">
+        <button type="submit">Join Now</button>
+      </form>
+    </section>
+
+    <!-- Romance Club -->
+    <section id="romance" class="club-section">
+      <h2>Romance Readers Club</h2>
+      <p>Feel the love in every chapter with heartwarming, passionate, and emotional reads.</p>
+      
+      <form class="join-form" action="../backend/process_join.php" method="POST">
+        <h4>Join the Romance Club</h4>
+        <label>
+          Name:
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" required>
+        </label>
+        <input type="hidden" name="club" value="Romance">
+        <button type="submit">Join Now</button>
+      </form>
+    </section>
+
+    <!-- Fantasy Club -->
+    <section id="fantasy" class="club-section">
+      <h2>Fantasy Adventurers Club</h2>
+      <p>Step into worlds of magic, mythical beasts, and epic quests.</p>
+      
+      <form class="join-form" action="../backend/process_join.php" method="POST">
+        <h4>Join the Fantasy Club</h4>
+        <label>
+          Name:
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" required>
+        </label>
+        <input type="hidden" name="club" value="Fantasy">
+        <button type="submit">Join Now</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 Book Club Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>

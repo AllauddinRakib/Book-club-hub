@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fantasy Books | Book Club Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/genre.css">
+  <style>
+    .search-filter-bar {
+      margin-bottom: 1.5rem;
+    }
+
+    .search-filter-bar input[type="text"] {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .book-list li {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">Book Club Hub</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="fiction.html">Fiction</a>
+        <a href="sci-fi.html">Sci-Fi</a>
+        <a href="romance.html">Romance</a>
+        <a href="fantasy.html">Fantasy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="genre-page container">
+    <h2>Fantasy Books</h2>
+    <p>Enter realms of magic, adventure, and mythical creatures:</p>
+
+    <!-- Search and Filter Bar -->
+    <div class="search-filter-bar">
+      <input type="text" id="searchInput" placeholder="Search books by title or author..." onkeyup="filterBooks()">
+    </div>
+
+    <ul class="book-list" id="bookList">
+      <li>The Lord of the Rings by J.R.R. Tolkien</li>
+      <li>A Game of Thrones by George R.R. Martin</li>
+      <li>The Name of the Wind by Patrick Rothfuss</li>
+      <li>The Way of Kings by Brandon Sanderson</li>
+      <li>Mistborn by Brandon Sanderson</li>
+      <li>The Poppy War by R.F. Kuang</li>
+      <li>The Priory of the Orange Tree by Samantha Shannon</li>
+      <li>American Gods by Neil Gaiman</li>
+      <li>The Lies of Locke Lamora by Scott Lynch</li>
+      <li>The Fifth Season by N.K. Jemisin</li>
+    </ul>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <p class="copyright">&copy; 2023 Book Club Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for search/filter functionality -->
+  <script>
+    function filterBooks() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const listItems = document.getElementById('bookList').getElementsByTagName('li');
+
+      for (let i = 0; i < listItems.length; i++) {
+        const text = listItems[i].textContent.toLowerCase();
+        listItems[i].style.display = text.includes(input) ? '' : 'none';
+      }
+    }
+  </script>
+</body>
+</html>

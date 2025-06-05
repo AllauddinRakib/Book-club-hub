@@ -1,0 +1,94 @@
+/* Reset + Font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('../images/otp-bg.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center Container */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* OTP Box */
+.otp-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.otp-box h2 {
+  margin-bottom: 1rem;
+}
+
+.otp-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.otp-box input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.otp-box button {
+  padding: 0.75rem;
+  background-color: #eb0808;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.otp-box button:hover {
+  background-color: #c70707;
+}
+
+.resend-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.resend-text a {
+  color: #eb0808;
+  text-decoration: underline;
+}
+
+/* Footer */
+.main-footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.footer-links {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

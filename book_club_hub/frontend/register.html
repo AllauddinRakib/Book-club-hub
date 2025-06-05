@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Password | Book Club Hub</title>
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-header">
+      <h1>Set Your Password</h1>
+      <p>Create a secure password to continue.</p>
+    </div>
+    <form class="auth-form" action="../backend/save_password.php" method="POST" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" required />
+        <small id="passwordMessage" class="error"></small>
+      </div>
+      <div class="form-group">
+        <label><input type="checkbox" id="togglePassword" /> Show Passwords</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Continue</button>
+    </form>
+  </div>
+
+  <script>
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirm_password");
+    const message = document.getElementById("passwordMessage");
+    const toggle = document.getElementById("togglePassword");
+
+    toggle.addEventListener("change", () => {
+      const type = toggle.checked ? "text" : "password";
+      password.type = type;
+      confirmPassword.type = type;
+    });
+
+    function validatePasswordStrength(pw) {
+      const strongRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+      return strongRegex.test(pw);
+    }
+
+    function validateForm() {
+      if (!validatePasswordStrength(password.value)) {
+        message.textContent = "Password must be at least 8 characters and include uppercase, lowercase, number, and special character.";
+        return false;
+      }
+
+      if (password.value !== confirmPassword.value) {
+        message.textContent = "Passwords do not match.";
+        return false;
+      }
+
+      message.textContent = "";
+      return true;
+    }
+  </script>
+
+  <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p class="copyright">&copy; 2025 Book Club Hub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

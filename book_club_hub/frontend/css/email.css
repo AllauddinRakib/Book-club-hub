@@ -1,0 +1,130 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Full height layout === */
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: url('../image/bookshelf.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+    /* Back to Home */
+    .back-home {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      display: inline-block;
+      background-color: #fff;
+      color: #4a2c8c;
+      padding: 0.5rem 1rem;
+      border: 2px solid #4a2c8c;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .back-home:hover {
+      background-color: #4a2c8c;
+      color: #fff;
+    }
+
+/* === Main content container === */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Form Styling === */
+form {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #4a2c8c;
+}
+
+input[type="email"] {
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #4a2c8c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #321c66;
+}
+
+/* === Footer === */
+.main-footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.main-footer p {
+  font-size: 0.85rem;
+}

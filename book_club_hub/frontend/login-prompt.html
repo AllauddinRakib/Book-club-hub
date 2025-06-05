@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login Required | Book Club Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/login-prompt.css" />
+  <style>
+    .login-prompt-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      text-align: center;
+    }
+
+    .login-prompt-wrapper h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #3e2f5b;
+    }
+
+    .login-prompt-wrapper p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .login-btn {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      border: none;
+      border-radius: 10px;
+      background-color: #6c4a7d;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #573a66;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-prompt-wrapper container">
+    <h2>Login Required</h2>
+    <p>You must be logged in to read this book.</p>
+    <button class="login-btn" onclick="location.href='login.html'">Go to Login</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Container */
+.auth-container {
+  flex: 1;
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header h1 {
+  font-size: 1.75rem;
+  color: #222;
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Grouped Fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-half {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group-half .form-group {
+  flex: 1;
+}
+
+/* Inputs & Textarea */
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Button */
+.btn {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #eb0808;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c70707;
+}
+
+/* Footer */
+.main-footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.main-footer .footer-links {
+  margin-bottom: 0.75rem;
+}
+
+.main-footer .footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.75rem;
+}
+
+.main-footer .footer-links a:hover {
+  text-decoration: underline;
+}

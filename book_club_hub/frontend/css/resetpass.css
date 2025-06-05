@@ -1,0 +1,112 @@
+:root {
+      --primary: #2C3E50;
+      --secondary: #E67E22;
+      --light: #F5F5F5;
+      --dark: #333;
+      --border: #ddd;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      padding-bottom: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: var(--dark);
+    }
+
+    .container {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 450px;
+      padding: 2.5rem;
+      margin: 1rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 500;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    input[type="password"] {
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 2px rgba(230, 126, 34, 0.2);
+    }
+
+    .btn {
+      padding: 0.75rem;
+      background: var(--secondary);
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: #d35400;
+    }
+
+    .message {
+      font-size: 0.9rem;
+      color: red;
+    } 
+
+    /* Footer */
+.main-footer {
+  background: var(--primary);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.copyright {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
