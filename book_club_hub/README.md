@@ -1,2 +1,0 @@
-# BOOK CLUB HUB
-
